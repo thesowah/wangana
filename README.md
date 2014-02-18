@@ -3,19 +3,6 @@ Wangana
 
 Wangan is responsive Jekyll theme, perfect for powering your GitHub hosted blog.
 
-<div class="js-toggler-container js-social-container starring-container ">
-    <a href="/nadjetey/wangana/unstar" class="minibutton with-count js-toggler-target star-button starred upwards" title="Unstar this repository" data-remote="true" data-method="post" rel="nofollow">
-      <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
-    </a>
-
-    <a href="/nadjetey/wangana/star" class="minibutton with-count js-toggler-target star-button unstarred upwards" title="Star this repository" data-remote="true" data-method="post" rel="nofollow">
-      <span class="octicon octicon-star"></span><span class="text">Star</span>
-    </a>
-
-      <a class="social-count js-social-count" href="/nadjetey/wangana/stargazers">
-        0
-      </a>
-  </div>
 ## Screenshots
 ``` 
 coming soon
