@@ -2,9 +2,9 @@ Wangana
 ==============
 
 Wangan is responsive Jekyll theme, perfect for powering your GitHub hosted blog.
-<a href="#" class="button danger">Delete post</a>
+<a href="https://github.com/nadjetey/wangana/star" class="button danger">like</a>
 ## Screenshots
- ``coming soon
+``` coming soon
 ## Installation
 
 ``` bash
