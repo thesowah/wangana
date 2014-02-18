@@ -1,0 +1,13 @@
+---
+layout: default
+search: false
+---          
+<div class="post">
+    <div class="container strip">
+        <div class="post-header">
+            <div class="post-title">{{ page.title }}</div>
+            <div class="blog-meta">{{ page.date |  date: "%A %-d %B %Y %Z" }}</div>
+        </div>        
+        {{ content }}
+    </div>
+</div>

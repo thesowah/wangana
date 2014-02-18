@@ -1,0 +1,13 @@
+name: Your New Jekyll Site
+markdown: redcarpet
+pygments: true
+
+permalink: none
+#uncomment for local server
+#url: localhost:4000
+owner:
+    name: Nii Adjetey Sowah
+    twitter: #
+    github: #
+        
+        

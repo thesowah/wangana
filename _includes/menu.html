@@ -1,0 +1,21 @@
+<nav class="brand">
+    {% if page.url contains "index.html" == true %}
+        {% assign home = true %}
+    {% else %}
+        {% assign home = false %}
+    {% endif %}
+
+    {% if home == false %}
+    <a id="brand-return" data-toggle="tooltip" data-placement="bottom" title="Go back home" href="/">
+        <span  class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    {% endif %}
+    <ul class="nav nav-pills {% if home == true %}menu-padding-resize{% endif %}" id="brand-menu">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"  id="drop1">            
+            <i id="brand-icon" class="fa fa-bars fa-2x"></i>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+            <li><a href="{{site.url}}">Home</a></li>
+        </ul>      
+    </ul>    
+</nav>

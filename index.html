@@ -1,0 +1,26 @@
+---
+layout: default
+title: Wangana
+search: true
+---
+
+<div class="col-sm-12">
+    <div class="posts">
+        {% for post in site.posts %}
+        <div class="post-li">
+            <div class="col-sm-4 text-center">
+                <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
+                <p class="blog-meta">{{ post.date | date: "%A %-d %B %Y %Z"  }}</p>
+            </div> 
+
+            <div class="col-sm-5" id="post-summary">
+                {{ post.excerpt | truncatewords: 30 }}
+            </div>
+
+            <div class="col-sm-3 text-center">                                    
+                <a>{{ post.tags | join:'</a><a>' }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>    
+</div>

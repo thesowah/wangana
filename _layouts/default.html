@@ -1,0 +1,27 @@
+{% include header.html %}
+
+{% include page-nav.html %}
+<span class="statusbar"></span>
+
+{% include menu.html %}
+
+<!-- Wrap all page content here -->
+<div id="wrap">
+    <div class="container">
+        <!-- Fixed navbar -->
+        <div class="header">       
+            {% if page.title != "nil" %}
+                <div class="title">{{ page.title }}</div>  
+            {% endif %}
+            <ul class="social-icons">
+                <a href="https://github.com/{{site.owner.github}}"><li><i class="fa fa-github-alt fa-lg"></i></li></a>
+                <a href="https://twitter.com/{{site.owner.twitter}}"><li><i class="fa fa-twitter fa-lg"></i></li></a>
+            </ul>
+        </div>
+
+        <div class="row strip">
+            {{ content }}
+        </div>        
+    </div>                        
+</div> 
+{% include footer.html %}

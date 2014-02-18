@@ -1,0 +1,373 @@
+/*****************************************************************************/
+/* Author: Nii Adjetey Sowah
+/* Date: Feb 2014
+/* Project: Wangana - Jekyll theme
+/*****************************************************************************/
+html,
+body {
+  height: 100%;  
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -70px;
+    padding: 0;
+}
+
+.footer {
+    height: 60px;
+}
+
+#search {      
+    font-size: 40px;
+    padding: 0px 30px;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);        
+    border: none;
+}
+
+#searchbox {        
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+@media (min-width: 768px) { 
+    #wrap .container {
+        max-width: 1000px;
+    }
+
+    .post .container {
+        max-width: 700px !important; 
+    }
+
+    .strip{
+        padding: 0 !important;
+    }
+
+    .post > .container,
+    #wrap > .container{
+        padding: 75px 0 60px;
+    }       
+
+    .posts {
+        margin: 40px 0;
+    }
+
+    .post {
+        margin: 40px 40px;
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Links
+/*
+/*****************************************************************************/
+a {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+a:hover, a:visited, a:focus {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.results a::before, .results a::after,
+.footer a::before, .footer a::after,
+.post-li a::before, .post-li a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.results a::before,
+.footer a::before,
+.post-li a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.results a::after,
+.footer a::after,
+.post-li a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.results a:hover::before, .results a:hover::after, .results a:focus::before, .results a:focus::after, 
+.footer a:hover::before, .footer a:hover::after, .footer a:focus::before, .footer a:focus::after, 
+.post-li a:hover::before, .post-li a:hover::after, .post-li a:focus::before, .post-li a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+/*****************************************************************************/
+/*
+/* Floating Action Objects
+/*
+/*****************************************************************************/
+/* Bigger screens */
+@media (min-width: 768px) {
+    .page-nav {
+        position: fixed;
+        right: 0;    
+        padding: 30px 30px;
+        width: 100%; 
+        display: inline-block;  
+    }
+
+    #page-down { bottom: 30px; }
+
+    #page-up { top: 0; }
+
+    #page-preview { font-size: 30px; }
+
+    #page-preview-icon {
+        z-index: 9001;
+        cursor : pointer;
+    }
+
+    .page-preview-text {         
+        right: 30px;
+        left: 130px;    
+        background: #fff;
+        position : absolute;  
+        text-align: center;    
+        top : -9000px;
+        display : block;
+        cursor : pointer; 
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .brand {        
+        position: fixed;    
+        top: 30px;
+        left: 30px;
+        display: inline-block;   
+        z-index: 5000;    
+        vertical-align: middle;
+    }
+    
+    .menu-padding-resize {
+        padding-left: 38px !important;
+    }    
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+    #wrap {
+        padding-bottom: 70px;
+    }
+    
+    .page-nav,
+    .header .title,
+    #post-summary {
+        display: none !important;
+    }
+
+    .brand { 
+        margin-top: 10px;
+        position: relative  !important;
+    }
+
+    #wrap {
+        margin-top: 40px;
+    }
+    
+    .post-title, .title, #brand-icon, #brand-return, #search {
+        font-size: 22px !important;
+    }
+    
+    .menu-padding-resize{
+        padding-left: 28px !important;
+    }
+}
+
+#brand-menu { 
+    display: inline-block; 
+    margin: 0px;
+    padding: 0px;    
+}
+
+#brand-menu .dropdown-menu{
+    margin: 2px 0 0 37px !important;
+    border-radius: 0px !important;
+}
+
+#brand-return { font-size: 30px; }
+
+#page-preview, #brand-return {
+    color: #e8e8e8 !important;
+}
+
+#page-preview:hover, #brand-return:hover {
+    color: black !important;    
+}
+
+.post-li {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0 0;
+}
+
+.post-li:hover {
+    background: #f5f5f5;         
+}
+
+#page-preview:active .page-preview-text, #page-preview:focus .page-preview-text, #page-preview:hover .page-preview-text{    
+    top:auto;
+}
+
+/*****************************************************************************/
+/*
+/* Typography & Font
+/*
+/*****************************************************************************/
+body{
+    color: black;
+    font: 17px 'Poly', 'Helvetica Neue', Helvetica, serif, Arial !important;
+}
+
+.blog-meta {
+    font-size: 16px;
+    color: #b3b3b1;
+}
+
+.page-preview-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+    float: left;    
+}
+
+.post-header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.post-title {
+    font-size: 32px;
+    font-weight: bold;  
+}
+
+.post-header .blog-meta {
+    line-height: 37px;   
+    font-weight: bold;
+}
+
+.header {
+    display: inline-block;  
+    width: 100%;
+    z-index: 8000;
+    padding-left: 40px;
+}
+
+.social-icons {    
+    float: right;    
+}
+
+.social-icons li {
+    background-color: #f5f5f5;    
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;    
+    width: 40px;
+    margin-right: -2px;
+    padding: 0;
+}
+
+.social-icons li:hover {
+    background-color: black;    
+    color: white !important;
+}
+
+#brand-icon { 
+    background-color: #f5f5f5;   
+    padding: 8px 12px 7px;    
+}
+
+.open#brand-menu a:focus #brand-icon{ /*toggle open selector (click-effect)*/
+    background-color: black;    
+    color: white !important;
+}
+
+
+/*****************************************************************************/
+/*
+/* Extra
+/*
+/*****************************************************************************/
+.statusbar {
+    top: 0;
+    position: fixed;
+    background-color: #eb5e29;
+    height: 2px;
+}
+
+
+/****************************************************************************
+/*
+/* 
+/*
+/*****************************************************************************/
+
+/*background-color: #3f3f3f;*/
+/*for comments background*/
+
+.icon-remove-sign {
+    cursor: pointer;
+    display: none;
+}
+
+.results li {    
+    padding: 20px 0 0;
+}
+
+.leaders {
+    overflow: hidden;
+}
+
+.leaders .leaders-left {
+    float: left;
+    padding: 0 .2em 0 0;
+    margin: 0;
+}
+
+.leaders .leaders-right {
+    float: right;
+    padding: 0 0 0 .2em;
+    margin: 0;
+}
+
+.leaders li:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    height: 1em;
+    border-bottom: 2px dotted;
+}
