@@ -21,3 +21,7 @@ The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document
 I'd love to hear from you, [send me a tweet](https://twitter.com/_nadjetey). Feel free to [open issues](https://github.com/nadjetey/wangana/issues/new) if you run into trouble or have suggestions. Pull Requests always welcome.
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nadjetey/wangana/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
