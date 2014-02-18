@@ -1,5 +1,4 @@
-Wangana
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nadjetey/wangana/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Wangana [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nadjetey/wangana/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 ==============
 
 Wangan is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog.
