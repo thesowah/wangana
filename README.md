@@ -8,13 +8,13 @@ Wangan is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering 
 coming soon
 ``` 
 
-## Theme customization
+## Customization
 
 Next you'll want to change a few things. Most of them can be changed directly in
 [_config.yml][config]. That's where you can add your social links, change the accent
 color, stuff like that.
 
-## Copyright License
+## Copyright
 The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document.](LICENSE)
 
 ## Contact
