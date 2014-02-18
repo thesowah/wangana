@@ -2,11 +2,9 @@ Wangana
 ==============
 
 Wangan is responsive Jekyll theme, perfect for powering your GitHub hosted blog.
-<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
-<table><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=_nadjetey&repo=wangana&type=watch&count=true" height="30" width="118" frameborder="0" scrolling="0" style="width:118px; height: 30px;" allowTransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=_nadjetey&repo=wangana&type=fork&count=true" height="30" width="118" frameborder="0" scrolling="0" style="width:118px; height: 30px;" allowTransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=_nadjetey&type=follow&count=true" height="30" width="168" frameborder="0" scrolling="0" style="width:168px; height: 30px;" allowTransparency="true"></iframe></td></tr></table>
+<a href="#" class="button danger">Delete post</a>
 ## Screenshots
-<iframe src="http://ghbtns.com/github-btn.html?user=chibicode&amp;repo=solo&amp;type=watch&amp;count=true&amp;size=large"allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe><br/>
+ ``coming soon
 ## Installation
 
 ``` bash
