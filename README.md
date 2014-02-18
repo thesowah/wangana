@@ -1,22 +1,12 @@
 Wangana
 ==============
 
-Wangan is responsive Jekyll theme, perfect for powering your GitHub hosted blog.
+Wangan is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog.
 
 ## Screenshots
 ``` 
 coming soon
 ``` 
-
-## Installation
-
-``` bash
-- Install Jekyll: `gem install jekyll`
-- [Fork this repository][fork]
-- Clone it: `git clone https://github.com/YOUR-USER/lagom`
-- Run the jekyll server: `jekyll serve`
-```
-You should have a server up and running locally at <http://localhost:4000>.
 
 ## Theme customization
 
@@ -28,7 +18,6 @@ color, stuff like that.
 The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document.](LICENSE)
 
 ## Contact
-I'd love to hear from you, [send me a tweet](https://twitter.com/_nadjetey). Feel free to [open issues](https://github.com/nadjetey/wangana/issues/new) if you
-run into trouble or have suggestions. Pull Requests always welcome.
+I'd love to hear from you, [send me a tweet](https://twitter.com/_nadjetey). Feel free to [open issues](https://github.com/nadjetey/wangana/issues/new) if you run into trouble or have suggestions. Pull Requests always welcome.
 
 
