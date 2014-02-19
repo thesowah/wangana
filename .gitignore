@@ -1,2 +1,3 @@
 _site
-/nbproject
+.DS_Store
+nbproject
