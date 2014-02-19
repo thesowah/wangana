@@ -10,7 +10,7 @@
     <div class="container">
         <!-- Fixed navbar -->
         <div class="header">       
-            {% if page.title != "nil" %}
+            {% if page.search == "false" %}
                 <div class="title">{{ page.title }}</div>  
             {% endif %}
             <ul class="social-icons">
@@ -21,7 +21,7 @@
 
         <div class="row strip">
             {{ content }}
-        </div>        
+        </div>         
     </div>                        
 </div> 
 {% include footer.html %}

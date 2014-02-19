@@ -76,6 +76,7 @@ a:hover, a:visited, a:focus {
     text-decoration: none !important;
 }
 
+.page-preview-title::before, .page-preview-title::after,
 .results a::before, .results a::after,
 .footer a::before, .footer a::after,
 .post-li a::before, .post-li a::after {
@@ -86,6 +87,7 @@ a:hover, a:visited, a:focus {
     transition: transform 0.3s, opacity 0.2s;
 }
 
+.page-preview-title::before,
 .results a::before,
 .footer a::before,
 .post-li a::before {
@@ -96,6 +98,7 @@ a:hover, a:visited, a:focus {
     transform: translateX(20px);
 }
 
+.page-preview-title::after,
 .results a::after,
 .footer a::after,
 .post-li a::after {
@@ -106,6 +109,7 @@ a:hover, a:visited, a:focus {
     transform: translateX(-20px);
 }
 
+.page-preview-title:hover::before, .page-preview-title:hover::after, .page-preview-title:focus::before, .page-preview-title:focus::after, 
 .results a:hover::before, .results a:hover::after, .results a:focus::before, .results a:focus::after, 
 .footer a:hover::before, .footer a:hover::after, .footer a:focus::before, .footer a:focus::after, 
 .post-li a:hover::before, .post-li a:hover::after, .post-li a:focus::before, .post-li a:focus::after {
@@ -127,14 +131,16 @@ a:hover, a:visited, a:focus {
         right: 0;    
         padding: 30px 30px;
         width: 100%; 
-        display: inline-block;  
+        display: inline-block; 
     }
 
     #page-down { bottom: 30px; }
 
     #page-up { top: 0; }
 
-    #page-preview { font-size: 30px; }
+    #page-preview { 
+        font-size: 30px; 
+    }
 
     #page-preview-icon {
         z-index: 9001;
@@ -168,10 +174,21 @@ a:hover, a:visited, a:focus {
     }    
 }
 
+
+/* Medium + small screens */
+/*@media (max-width: 1200px) {
+    .header {
+        padding-left: 20% !important;
+    }
+}*/
+
 /* Small screens */
 @media (max-width: 767px) {
     #wrap {
         padding-bottom: 70px;
+    }
+    .header {
+        margin-top: 10px;
     }
     
     .page-nav,
@@ -182,11 +199,11 @@ a:hover, a:visited, a:focus {
 
     .brand { 
         margin-top: 10px;
-        position: relative  !important;
+        position: absolute !important;
     }
 
     #wrap {
-        margin-top: 40px;
+        /*margin-top: 40px;*/
     }
     
     .post-title, .title, #brand-icon, #brand-return, #search {
@@ -329,15 +346,10 @@ body{
     height: 2px;
 }
 
-
-/****************************************************************************
-/*
-/* 
-/*
-/*****************************************************************************/
-
-/*background-color: #3f3f3f;*/
-/*for comments background*/
+.post-comments {
+    border-top: 2px solid black;
+    margin-top: 100px;
+}
 
 .icon-remove-sign {
     cursor: pointer;
