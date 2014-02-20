@@ -1,0 +1,70 @@
+---
+layout: default
+title: Tags
+search: false
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+<!-- site_tags: {{ site_tags }} -->
+{% capture num_words %}
+{{ site_tags | split:',' | size }}
+{% endcapture %}
+<!-- num_words: {{ num_words }} -->
+{% assign tag_words = site_tags | split:',' | sort %}
+<!-- tag_words: {{ tag_words }} -->
+
+<div class="col-sm-12">
+    <h1>Tags</h1>
+    <ul class="leaders">
+        {% for item in (0..num_words) %}{% unless forloop.last %}
+        {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+        <li>
+            <span class="leaders-left">{{ site.tags[this_word].size }}</span>
+            <a class="leaders-right dropdown-tags" data-for="#tag-pages{{item}}">
+                {{ this_word }} <i class="fa fa-chevron-down"></i>            
+            </a>
+        </li> 
+        <ul class="posts tags">
+            {% for post in site.tags[this_word] %}{% if post.title != null %}
+            <li class="tag-pages" id="tag-pages{{item}}">
+                <span class="entry-date leaders-left">
+                    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%A %-d %B %Y %Z" }}</time>
+                </span> 
+                <a class="leaders-right" href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+            {% endif %}{% endfor %}
+        </ul>
+
+        {% endunless %}{% endfor %}
+    </ul>
+</div> 
+<script>
+    $(document).ready(function() {
+        var panels = $('.tag-pages');
+        var panelsButton = $('.dropdown-tags');
+        panels.hide();
+
+        //Click dropdown
+        panelsButton.click(function() {
+            //get data-for attribute
+            var dataFor = $(this).attr('data-for');
+            var idFor = $(dataFor);
+
+            //current button
+            var currentButton = $(this).find('i');
+            idFor.slideToggle(400, function() {
+                //Completed slidetoggle
+                if (idFor.is(':visible'))
+                {
+                    currentButton.replaceWith('<i class="fa fa-chevron-up"></i>');
+                }
+                else
+                {
+                    currentButton.replaceWith('<i class="fa fa-chevron-down"></i>');
+                }
+            });
+        });
+    });
+</script>
+<!-- Thanks to [LanyonM](https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html)
+     for this wonderful tutorial -->
