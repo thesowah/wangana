@@ -1,11 +1,13 @@
 ![favicon](https://raw.github.com/nadjetey/wangana/master/favicon.png) Wangana [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nadjetey/wangana/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 ==============
 
-Wangan is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog.
+Wangan is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog -by developer and design-hacker [Nii](https://twitter.com/_nadjetey).
 
 ## Screenshots
 ![wangana](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-big.png)
+#### blog page
 ![post](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-post.png)
+#### tags page
 ![tags](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-tags.png)
 
 ## Demo
