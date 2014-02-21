@@ -4,6 +4,7 @@ title: Tags
 search: false
 ---
 
+<!-- Thanks to [LanyonM](https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html) for this wonderful tutorial -->
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 <!-- site_tags: {{ site_tags }} -->
 {% capture num_words %}
@@ -39,32 +40,5 @@ search: false
     </ul>
 </div> 
 <script>
-    $(document).ready(function() {
-        var panels = $('.tag-pages');
-        var panelsButton = $('.dropdown-tags');
-        panels.hide();
-
-        //Click dropdown
-        panelsButton.click(function() {
-            //get data-for attribute
-            var dataFor = $(this).attr('data-for');
-            var idFor = $(dataFor);
-
-            //current button
-            var currentButton = $(this).find('i');
-            idFor.slideToggle(400, function() {
-                //Completed slidetoggle
-                if (idFor.is(':visible'))
-                {
-                    currentButton.replaceWith('<i class="fa fa-chevron-up"></i>');
-                }
-                else
-                {
-                    currentButton.replaceWith('<i class="fa fa-chevron-down"></i>');
-                }
-            });
-        });
-    });
+    {% include scripts/tags.html %}      
 </script>
-<!-- Thanks to [LanyonM](https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html)
-     for this wonderful tutorial -->

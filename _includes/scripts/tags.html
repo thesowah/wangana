@@ -1,0 +1,26 @@
+$(document).ready(function() {
+    var panels = $('.tag-pages');
+    var panelsButton = $('.dropdown-tags');
+    panels.hide();
+
+    //Click dropdown
+    panelsButton.click(function() {
+        //get data-for attribute
+        var dataFor = $(this).attr('data-for');
+        var idFor = $(dataFor);
+
+        //current button
+        var currentButton = $(this).find('i');
+        idFor.slideToggle(400, function() {
+            //Completed slidetoggle
+            if (idFor.is(':visible'))
+            {
+                currentButton.replaceWith('<i class="fa fa-chevron-up"></i>');
+            }
+            else
+            {
+                currentButton.replaceWith('<i class="fa fa-chevron-down"></i>');
+            }
+        });
+    });
+});

@@ -1,0 +1,74 @@
+$(document).ready(function() {
+    //Simple search part1                
+    $('.search-field').simpleJekyllSearch({
+        jsonFile: '{{site.url}}/search.json',
+        template: '<li><span class="leaders-left">{date}</span><a href="{url}" title="{title}" class="leaders-right">{title}</a></li>',
+        searchResults: '.results',
+        searchResultsTitle: '#',
+        noResults: '<li>Tweaa, nothing found :( <strong><a href="/"> Return to home-page</a></strong></li>'
+    });
+
+    //remove search cookie after use
+    if (String(window.location.href).search("search.html") !== -1) {
+        $(".search-field").val($.cookie("searchcookie"));
+        $.removeCookie("searchcookie");
+    }
+});
+
+// Simple search part2
+//(function($, window, undefined) {
+var bs = {
+    close: $(".icon-remove-sign"),
+    searchfield: $(".search-field")
+};
+
+//Loads only after page fully loads
+$(window).bind("load", function() {
+    toggleRemoveSign();
+    $(".search-field").focus();
+});
+
+//remove all text from searchfield
+bs.close.on('click', function() {
+    bs.searchfield.val('');
+    toggleRemoveSign();
+});
+
+
+//Trigger when the searchfield is filled
+bs.searchfield.on('input', function() {
+    toggleRemoveSign();
+});
+
+//Search ONLY after hitting enter
+bs.searchfield.on('keydown', function() {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        openSearchPage();
+    }
+    ;
+});
+
+//open search page on- searchfield on-input
+function openSearchPage() {
+    var url = String(window.location.href);
+    if (url.search("search.html") == -1) {
+        $.cookie("searchcookie", $(".search-field").val());
+        if (bs.searchfield.val().length > 0) {
+            window.open('{{site.url}}/search.html', '_self');
+        }
+    }
+}
+//})(jQuery, window);
+
+
+
+//hide close icon if searchfield is empty
+function toggleRemoveSign() {
+    if ($(".search-field").length) { //if searchbox exists then,
+        if ($(".search-field").val().length > 0)
+            $(".icon-remove-sign").css({display: "inline-block"});
+        else
+            $(".icon-remove-sign").css({display: "none"});
+    }
+}

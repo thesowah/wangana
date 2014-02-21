@@ -8,12 +8,12 @@ search: false
             <div class="post-title">{{ page.title }}</div>
             <div class="blog-meta">{{ page.date |  date: "%A %-d %B %Y %Z" }}</div>
         </div>        
-        {{ content }}   
+        {{ content }}          
         {% if page.comments %}
-        <div class="post-comments">
-            <div id="disqus_thread"></div>
-        </div>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+            </div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         {% endif %}
     </div>    
 </div>
