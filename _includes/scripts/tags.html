@@ -11,7 +11,7 @@ $(document).ready(function() {
 
         //current button
         var currentButton = $(this).find('i');
-        idFor.slideToggle(400, function() {
+        idFor.parent().children().slideToggle(400, function() {
             //Completed slidetoggle
             if (idFor.is(':visible'))
             {
@@ -24,3 +24,4 @@ $(document).ready(function() {
         });
     });
 });
+

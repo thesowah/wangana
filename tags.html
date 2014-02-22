@@ -22,7 +22,10 @@ search: false
         <li>
             <span class="leaders-left">{{ site.tags[this_word].size }}</span>
             <a class="leaders-right dropdown-tags" data-for="#tag-pages{{item}}">
-                {{ this_word }} <i class="fa fa-chevron-down"></i>            
+                <strong>
+                    {{ this_word }} 
+                </strong>   
+                <i class="fa fa-chevron-down"></i>                          
             </a>
         </li> 
         <ul class="posts tags">
@@ -33,6 +36,7 @@ search: false
                 </span> 
                 <a class="leaders-right" href="{{ post.url }}">{{ post.title }}</a>
             </li>
+            
             {% endif %}{% endfor %}
         </ul>
 
@@ -42,3 +46,4 @@ search: false
 <script>
     {% include scripts/tags.html %}      
 </script>
+

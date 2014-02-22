@@ -25,7 +25,9 @@ body {
     outline: none;
     width: 90%;
 }
-
+.tags > .tag-pages{
+    margin: 10px;
+}
 /*****************************************************************************/
 /* Links
 /*****************************************************************************/
@@ -34,6 +36,10 @@ a {
     text-decoration: none !important;
     cursor: pointer;
 }
+.post a {
+    border-bottom: 1px dotted #b3b3b1;
+}
+
 a:hover,
 a:visited,
 a:focus {
