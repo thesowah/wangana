@@ -1,7 +1,7 @@
 ![favicon](https://raw.github.com/nadjetey/wangana/master/favicon.png) Wangana [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nadjetey/wangana/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 ==============
 
-Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog - by developer and design hacker [Nii](https://twitter.com/_nadjetey).
+Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog -- by developer and design hacker [Nii](https://twitter.com/_nadjetey).
 
 ## Screenshots
 ![wangana](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-big.png)
@@ -13,11 +13,8 @@ Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering
 ## Demo
 See wangana theme in use [here](http://nadjetey.github.io)
 
-## Customization
-
-Next you'll want to change a few things. Most of them can be changed directly in
-[_config.yml][config]. That's where you can add your social links, change the accent
-color, stuff like that.
+## Installation & Customization
+[Download](https://github.com/nadjetey/wangana/archive/master.zip) this theme and follow the instructions on [Github pages](http://pages.github.com/) to use. Wangana theme works out of the box. To customize it, change the value pairs in the '_config.yml' file. That's where you can add your social links, Google analytics, disqus comments, and others.
 
 ## Copyright
 The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document.](LICENSE)

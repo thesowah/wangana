@@ -13,6 +13,7 @@ body {
     margin: 0 auto -70px;
     padding: 0;
 }
+#wrap > .container { padding: 75px 0 60px }
 .footer { height: 60px }
 #search {
     font-size: 40px;
@@ -233,15 +234,21 @@ body {
 /*****************************************************************************/
 /* Media queries
 /*****************************************************************************/
+@media (min-width: 1024px) and (max-width: 1300px) {
+    #wrap > .container { max-width: 800px !important}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #wrap > .container { max-width: 600px !important}
+    .brand {left: 0 !important} 
 
+}
 @media (min-width: 768px) { /* Bigger screens */
-    #wrap .container { max-width: 1000px }
+    #wrap .container { max-width: 985px }
     .post .container { max-width: 700px !important }
     .strip { padding: 0 !important }
-    .post > .container,
-    #wrap > .container { padding: 75px 0 60px }
+/*    .post > .container,
+    #wrap > .container { padding: 75px 0 60px } */
     .posts { margin: 40px 0 }
-    .post { margin: 40px 40px }
     .page-nav {
         position: fixed;
         right: 0;
