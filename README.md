@@ -5,9 +5,9 @@ Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering
 
 ## Screenshots
 ![wangana](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-big.png)
-#### blog page
+### Blog page
 ![post](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-post.png)
-#### tags page
+### Tags page
 ![tags](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-tags.png)
 
 ## Demo
