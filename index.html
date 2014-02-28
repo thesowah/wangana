@@ -17,8 +17,8 @@ search: true
                 {{ post.excerpt | truncatewords: 30 }}
             </div>
 
-            <div class="col-sm-3 text-center">                                    
-                <code>{{ post.tags | join:'</code> <code>' }}</code>
+            <div class="col-sm-3 text-center hide-on-phone">                                    
+                <a>{{ post.tags | join:'</a><a>' }}</a>
             </div>
         </div>
         {% endfor %}

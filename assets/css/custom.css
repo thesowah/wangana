@@ -308,4 +308,5 @@ body {
         height: 0 !important;
         border-bottom: none !important;
     }
+    .hide-on-phone{ display: none }
 }
