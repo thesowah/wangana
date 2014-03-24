@@ -3,13 +3,6 @@
 
 Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog -- by developer and design hacker [Nii](https://twitter.com/_nadjetey).
 
-## Screenshots
-![wangana](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-big.png)
-### Blog page
-![post](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-post.png)
-### Tags page
-![tags](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana-tags.png)
-
 ## Demo
 See wangana theme in use [here](http://nadjetey.github.io)
 
@@ -21,3 +14,11 @@ The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document
 
 ## Contact
 I'd love to hear from you, [send me a tweet](https://twitter.com/_nadjetey). Feel free to [open issues](https://github.com/nadjetey/wangana/issues/new) if you run into trouble or have suggestions. Pull Requests always welcome.
+
+## Version 2.0 (Currently available)
+What's new
++ Redesign of user interface(UI)
++ Better image embedding integration
++ Navigation improvements
++ Removed dependency on jquery.cookie.js
++ Included support for automatically updating fuzzy timestamps (jquery.timeago.js)

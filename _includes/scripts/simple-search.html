@@ -5,14 +5,8 @@ $(document).ready(function() {
         template: '<li><span class="leaders-left">{date}</span><a href="{url}" title="{title}" class="leaders-right">{title}</a></li>',
         searchResults: '.results',
         searchResultsTitle: '#',
-        noResults: '<li>Tweaa, nothing found :( <strong><a href="/"> Return to home-page</a></strong></li>'
+        noResults: '<li><span class="leaders-left">Nothing found</span> <span class="leaders-right">:(</span></li>'
     });
-
-    //remove search cookie after use
-    if (String(window.location.href).search("search.html") !== -1) {
-        $(".search-field").val($.cookie("searchcookie"));
-        $.removeCookie("searchcookie");
-    }
 });
 
 // Simple search part2
@@ -48,20 +42,6 @@ bs.searchfield.on('keydown', function() {
     }
     ;
 });
-
-//open search page on- searchfield on-input
-function openSearchPage() {
-    var url = String(window.location.href);
-    if (url.search("search.html") == -1) {
-        $.cookie("searchcookie", $(".search-field").val());
-        if (bs.searchfield.val().length > 0) {
-            window.open('{{site.url}}/search.html', '_self');
-        }
-    }
-}
-//})(jQuery, window);
-
-
 
 //hide close icon if searchfield is empty
 function toggleRemoveSign() {

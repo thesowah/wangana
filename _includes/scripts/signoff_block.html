@@ -1,0 +1,20 @@
+<div class="signoff">
+    <ul>
+        <li>This post was written <i><time class="timeago" datetime="{{ page.date |  date: "%A %-d %B %Y" }}">{{ page.date }}</time></i></li>
+        {% if site.owner.twitter %}
+        <li>If you liked this post, you can:</li>
+        <ul>
+            <li>
+                <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via={{ site.owner.twitter }}" target="_blank">share it with your followers</a> or                         
+                <a href="https://twitter.com/{{ site.owner.twitter }}">follow me on Twitter</a>!
+            </li>
+        </ul>                    
+        {% endif %}
+    </ul>                
+</div>
+{% if page.comments %}
+<div class="post-comments">
+    <div id="disqus_thread"></div>
+</div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}

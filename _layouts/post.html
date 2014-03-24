@@ -1,19 +1,17 @@
 ---
 layout: default
-search: false
 ---          
-<div class="post">
-    <div class="container strip">
-        <div class="post-header">
-            <div class="post-title">{{ page.title }}</div>
-            <div class="blog-meta">{{ page.date |  date: "%A %-d %B %Y %Z" }}</div>
-        </div>        
-        {{ content }}          
-        {% if page.comments %}
-            <div class="post-comments">
-                <div id="disqus_thread"></div>
-            </div>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {% endif %}
-    </div>    
+<div class="col-sm-12">
+    <div class="posts">
+        <div class="post">        
+            {{ content }} 
+
+            {% include scripts/signoff_block.html %}            
+        </div>    
+    </div>
 </div>
+<script>
+    $(".page-preview-icon").hover(function(){        
+        $(this).parents(".page-nav").css("z-index","5000");        
+    });
+</script>   
