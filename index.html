@@ -7,37 +7,37 @@ title: Wangana
     <div class="posts">
         {% for post in site.posts %}
         <div class="post-li">
-            <div class="col-sm-8"> 
+            <div class="col-sm-8">
                 <ul class="postlist-block">
                     <li><time class="timeago postlist-meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
                     <a class="postlist-meta pull-right comments-meta" href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
                     <li><a class="postlist-title" href="{{ post.url }}">{{ post.title }}</a></li>
                 </ul>
-            </div> 
+            </div>
 
             <div class="col-sm-4 hide-on-phone">
-                <ul class="postlist-block pull-right postlist-meta">                    
-                    <li><a href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>                    
-                    <li><a href="{{ post.url }}">Read more <i class="fa fa-chevron-right"></i></a></li>                    
-                    <li><a class="postlist-detail-indicator">Expand</a></li>   
+                <ul class="postlist-block pull-right postlist-meta">
+                    <li><a href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
+                    <li><a href="{{ post.url }}">Read more <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a class="postlist-detail-indicator">Expand</a></li>
                 </ul>
             </div>
-            
-            <div class="col-sm-12 postlist-detail">                
+
+            <div class="col-sm-12 postlist-detail">
                 {{post.excerpt}}
             </div>
         </div>
         {% endfor %}
-    </div>    
+    </div>
 </div>
 
 <script>
     $(".post-li").click(function() {
         var preview = $(this).find(".postlist-detail-indicator");
-        preview.text(preview.text()=='Expand'?'Collapse':'Expand');   
-        
+        preview.text(preview.text()=='Expand'?'Collapse':'Expand');
+
         $(this).children(".postlist-detail").toggle("slow", function() {
-            
-        });        
+
+        });
     });
 </script>

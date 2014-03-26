@@ -1,16 +1,21 @@
 $(document).ready(function() {
-    //Simple search part1                
+    //Simple search part1
     $('.search-field').simpleJekyllSearch({
         jsonFile: '{{site.url}}/search.json',
-        template: '<li><span class="leaders-left">{date}</span><a href="{url}" title="{title}" class="leaders-right">{title}</a></li>',
+        template: '<li><time class="leaders-left timeago" datetime="{date}"></time><a href="{url}" title="{title}" class="leaders-right">{title}</a></li>',
         searchResults: '.results',
         searchResultsTitle: '#',
         noResults: '<li><span class="leaders-left">Nothing found</span> <span class="leaders-right">:(</span></li>'
     });
 });
 
-// Simple search part2
-//(function($, window, undefined) {
+$(document).on("keydown",function(e){
+    setTimeout(function(){
+    $(".timeago").timeago();
+    },300);
+    //console.log(e);
+});
+
 var bs = {
     close: $(".icon-remove-sign"),
     searchfield: $(".search-field")
@@ -28,19 +33,9 @@ bs.close.on('click', function() {
     toggleRemoveSign();
 });
 
-
 //Trigger when the searchfield is filled
 bs.searchfield.on('input', function() {
     toggleRemoveSign();
-});
-
-//Search ONLY after hitting enter
-bs.searchfield.on('keydown', function() {
-    if (event.keyCode == 13) {
-        event.preventDefault();
-        openSearchPage();
-    }
-    ;
 });
 
 //hide close icon if searchfield is empty
