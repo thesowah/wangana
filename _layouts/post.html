@@ -1,17 +1,26 @@
 ---
 layout: default
----          
+---
 <div class="col-sm-12">
     <div class="posts">
-        <div class="post">        
-            {{ content }} 
-
-            {% include scripts/signoff_block.html %}            
-        </div>    
+    	<div class="page-title">
+    		{{ page.title }}
+    		<div class="postlist-meta">
+    			Posted
+    			<time class="timeago" datetime="{{ page.date |  date: "%A %-d %B %Y" }}">{{ page.date }}</time>
+    			,
+    			<a href="{{ page.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a>
+    			comments.
+    		</div>
+    	</div>
+        <div class="post">
+            {{ content }}
+            {% include scripts/signoff_block.html %}
+        </div>
     </div>
 </div>
 <script>
-    $(".page-preview-icon").hover(function(){        
-        $(this).parents(".page-nav").css("z-index","5000");        
+    $(".page-preview-icon").hover(function(){
+        $(this).parents(".page-nav").css("z-index","5000");
     });
-</script>   
+</script>

@@ -14,6 +14,9 @@ title: Tags
 <!-- tag_words: {{ tag_words }} -->
 
 <div class="col-sm-12">
+    <div class="page-title">
+        {{ page.title }}
+    </div>
     <div class="tags-contaier">
         <ul class="leaders">
             {% for item in (0..num_words) %}{% unless forloop.last %}
@@ -22,25 +25,25 @@ title: Tags
                 <span class="leaders-left">{{ site.tags[this_word].size }}</span>
                 <a class="leaders-right dropdown-tags" data-for="#tag-pages{{item}}">
                     <strong>
-                        {{ this_word }} 
-                    </strong>   
-                    <i class="fa fa-chevron-down"></i>                          
+                        {{ this_word }}
+                    </strong>
+                    <i class="fa fa-chevron-down"></i>
                 </a>
-            </li> 
+            </li>
             <ul class="tags-contaier tags">
                 {% for post in site.tags[this_word] %}{% if post.title != null %}
                 <li class="tag-pages" id="tag-pages{{item}}">
                     <span class="entry-date leaders-left">
                         <time class="timeago" datetime="{{ post.date | date: "%A %-d %B %Y" }}" itemprop="datePublished">{{ post.date }}</time>
-                    </span> 
+                    </span>
                     <a class="leaders-right" href="{{ post.url }}">{{ post.title }}</a>
-                </li>           
+                </li>
                 {% endif %}{% endfor %}
             </ul>
             {% endunless %}{% endfor %}
         </ul>
     </div>
-</div> 
+</div>
 <script>
     {% include scripts/tags.html %}
 </script>

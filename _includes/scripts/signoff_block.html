@@ -1,16 +1,38 @@
 <div class="signoff">
+    <p>This article was posted
+        <i>
+            {{ page.date |  date: "%A %-d %B %Y" }}
+        </i>
+        {% if site.owner.twitter %}
+            by <a href="https://twitter.com/{{ site.owner.twitter }}">@{{site.owner.twitter}}</a>
+        {% endif %}
+    </p>
     <ul>
-        <li>This post was written <i><time class="timeago" datetime="{{ page.date |  date: "%A %-d %B %Y" }}">{{ page.date }}</time></i></li>
         {% if site.owner.twitter %}
         <li>If you liked this post, you can:</li>
         <ul>
             <li>
-                <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }} {{ site.url }}{{ page.url }}&via={{ site.owner.twitter }}" target="_blank">share it with your followers</a> or
-                <a href="https://twitter.com/{{ site.owner.twitter }}">follow me on Twitter</a>!
+                <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via={{ site.owner.twitter }}" target="_blank">share this post </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/{{ site.owner.twitter }}">follow me on @twitter</a>
             </li>
         </ul>
         {% endif %}
     </ul>
+    <ul>
+        <li>You might also like:</li>
+        <ul>
+        {% for post in site.related_posts limit:3 %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </ul>
+    <p>
+        Share your thoughts, your comments are welcome.
+    </p>
 </div>
 {% if page.comments %}
 <div class="post-comments">

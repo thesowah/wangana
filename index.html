@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Wangana
 ---
 
 <div class="col-sm-12">
@@ -19,7 +18,7 @@ title: Wangana
                 <ul class="postlist-block pull-right postlist-meta">
                     <li><a href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
                     <li><a href="{{ post.url }}">Read more <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a class="postlist-detail-indicator">Expand</a></li>
+                    <li><strong><a class="postlist-detail-indicator">Expand +</a></strong></li>
                 </ul>
             </div>
 
@@ -32,12 +31,10 @@ title: Wangana
 </div>
 
 <script>
-    $(".post-li").click(function() {
-        var preview = $(this).find(".postlist-detail-indicator");
-        preview.text(preview.text()=='Expand'?'Collapse':'Expand');
+    $(".post-li .postlist-detail-indicator").click(function() {
+        var preview = $(this);
+        preview.text(preview.text()=='Expand +'?'Collapse -':'Expand +');
 
-        $(this).children(".postlist-detail").toggle("slow", function() {
-
-        });
+        $(this).closest(".post-li").find(".postlist-detail").toggle("slow", function() {});
     });
 </script>
