@@ -1,0 +1,171 @@
+#main {
+  position: relative;
+}
+
+#main-content {
+  min-height: 600px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -70px;
+  padding: 0;
+  position: relative;
+  .container {
+    max-width: 800px!important;
+    padding: 75px 0 60px;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  min-width: 139px;
+  padding: 0!important;
+  a {
+    font-weight: 700!important;
+  }
+  li {
+    list-style-type: none;
+    display: block;
+    background: $primary-color;
+    margin: 0;
+    padding: 5px 10px;
+  }
+}
+
+body {
+  color:#000;
+  font: 17px Poly, 'Helvetica Neue', Helvetica, serif, Arial !important;
+}
+
+.footer {
+  height:60px;
+}
+
+#nav {
+  padding: 0!important;
+  .separator {
+    color: #333!important;
+    font-weight:700!important;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    background: $primary-color;
+    padding: 10px 0 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #wrap > .container {
+    padding: 0 0 20px;
+    overflow: hidden;
+  }
+  #wrap > .container > .row {
+    margin: 0;
+  }
+  .content {
+    min-height: 400px !important;
+    margin-top: 20px;
+    width: 100% !important;
+  }
+  .post-li > div {
+    width: 100% !important;
+  }
+  #menu {
+    display: block;
+    color: #fff!important;
+    font-weight: 700!important;
+    margin-top: 1px;
+    background: #333;
+    padding: 10px 0 10px 10px;
+    position: relative;
+  }
+  .menu-btn,.close-btn {
+    position: absolute;
+    top: 0.4em;
+    left: 1.875em;
+    display: block;
+    width: 2.625em;
+    height: 2.25em;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-size: 1.875em 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+  }
+  .menu-btn {
+    background: #333 url("/assets/fonts/nav-icon.png") left center no-repeat;
+  }
+  .close-btn {
+    background: #333 url("/assets/fonts/close-btn.png") left center no-repeat;
+  }
+  .menu-title {
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+  }
+  #nav {
+    height: 100%;
+    background: $primary-color;
+    position: absolute;
+    z-index: 1200;
+  }
+  .sidebar{
+    margin-left: 1.875em;
+  }
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  .row-offcanvas-left .sidebar-offcanvas {
+    position: absolute;
+    top:0;
+    left: -70%;
+  }
+  .row-offcanvas-left.active {
+    left: 70%;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 70% !important;
+  }
+  .postlist-meta li {
+    display: inline;
+  }
+  .hide-on-phone {
+    display: none;
+  }
+  .comments-meta {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  #menu .menu-title, .page-nav {
+    display: none;
+  }
+  #menu {
+    height: 50px;
+  }
+  #search {
+    position: relative;
+    top: 40px;
+    left: 30% !important;
+    padding: 0 30px;
+    width: 100%;
+  }
+  .leaders {
+    padding-left: 15px;
+  }
+  .leaders .leaders-left, .leaders .leaders-right {
+    width: 100%;
+  }
+  .results li {
+    padding-bottom: 10px !important;
+  }
+}

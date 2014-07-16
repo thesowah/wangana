@@ -7,8 +7,10 @@ layout: default
     		{{ page.title }}
     		<div class="postlist-meta">
     			Posted
-    			<time class="timeago" datetime="{{ page.date |  date: "%A %-d %B %Y" }}">{{ page.date }}</time>
-    			,
+                {% if site.owner.name %}
+                by {{site.owner.name}},
+                {% endif %}
+    			<time class="timeago" datetime="{{ page.date |  date: "%A %-d %B %Y" }}">{{ page.date }}</time>,
     			<a href="{{ page.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a>
     			comments.
     		</div>

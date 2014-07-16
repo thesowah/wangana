@@ -1,16 +1,24 @@
-name: Wanga Theme
-markdown: redcarpet
-pygments: true
+name: Wangana
+description:  Perfect for powering your GitHub hosted blog.
 
-permalink: /:year/:month/:title/
+sass:
+  sass_dir: assets/css/_sass
+  style: :compressed
+
+# url: http://nadjetey.github.io
+
 owner:
-    name: #
+    name: Nii Adjetey Sowah
     twitter: #
     github: #
     disqus_shortname: #
-    
+
 ga_id: #
 ga_username: #
-        
-timezone: #
-       
+
+permalink: /:year/:month/:title/
+timezone: Africa/Accra
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]

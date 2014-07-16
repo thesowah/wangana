@@ -3,25 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{site.name}} - {{page.title}}</title>
+        <title>{{ site.name }} {% if page.title %} &mdash; {{ page.title }} {% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="alternate" type="application/atom+xml" title="{{site.name}}" href="{{site.url }}/feed.xml">
 
-	{% if page.tags %}
-        <meta name="keywords" content="{{ page.tags }}">        
+        <meta name="description" content="nadjetey's blog on wangana - jekyll theme" />
+
+        {% if page.tags %}
+        <meta name="keywords" content="{{ page.tags }}">
+        {% else %}
+        <meta name="keywords" content="nadjetey, jekyll, wangana">
         {% endif %}
 
         <link rel="icon" type="image/png" href="{{site.url}}/favicon.png">
 
-        <!-- syntax highlighting CSS & FontAwesome-->
-        <link rel="stylesheet" href="{{site.url}}/assets/css/syntax.css">
-        <link rel="stylesheet" href="{{site.url}}/assets/css/font-awesome.min.css">
-
         <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{site.url}}/assets/css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{{site.url}}/assets/css/custom.css">
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="{{site.url}}/assets/css/bootstrap.min.css">
 
         <!-- JQuery -->
         <script src="{{site.url}}/assets/js/jquery-1.10.2.js"></script>
@@ -33,4 +31,4 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+<body>

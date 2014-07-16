@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="col-sm-12">
     <div class="posts">
         {% for post in site.posts %}
@@ -17,7 +16,7 @@ layout: default
             <div class="col-sm-4 hide-on-phone">
                 <ul class="postlist-block pull-right postlist-meta">
                     <li><a href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                    <li><a href="{{ post.url }}">Read more <i class="fa fa-chevron-right"></i></a></li>
+                    <li><i><a href="{{ post.url }}">Details...</a></i></li>
                     <li><strong><a class="postlist-detail-indicator">Expand +</a></strong></li>
                 </ul>
             </div>

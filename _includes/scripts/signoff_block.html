@@ -1,25 +1,15 @@
 <div class="signoff">
-    <p>This article was posted
+    <p>Posted
         <i>
             {{ page.date |  date: "%A %-d %B %Y" }}
         </i>
         {% if site.owner.twitter %}
             by <a href="https://twitter.com/{{ site.owner.twitter }}">@{{site.owner.twitter}}</a>
         {% endif %}
+        <a class="pull-right" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via={{ site.owner.twitter }}" target="_blank">
+            <i class="fa fa-retweet"></i> Share
+        </a>
     </p>
-    <ul>
-        {% if site.owner.twitter %}
-        <li>If you liked this post, you can:</li>
-        <ul>
-            <li>
-                <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via={{ site.owner.twitter }}" target="_blank">share this post </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/{{ site.owner.twitter }}">follow me on @twitter</a>
-            </li>
-        </ul>
-        {% endif %}
-    </ul>
     <ul>
         <li>You might also like:</li>
         <ul>
@@ -30,9 +20,6 @@
         {% endfor %}
         </ul>
     </ul>
-    <p>
-        Share your thoughts, your comments are welcome.
-    </p>
 </div>
 {% if page.comments %}
 <div class="post-comments">

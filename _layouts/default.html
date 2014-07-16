@@ -1,43 +1,61 @@
 {% include header.html %}
-<span class="statusbar"></span>
-{% include page-nav.html %}
 
-<!-- Wrap all page content here -->
-<div id="wrap">
-    <div class="container">
-        <div class="row row-offcanvas row-offcanvas-left">
-            <!-- side bar -->
-            <nav id="nav" role="navigation" class="col-sm-2 sidebar-offcanvas">
+<main id="main">
+    <span class="statusbar"></span>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+        <div id="main-content" class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <!-- side bar -->
+                <nav id="nav" role="navigation" class="col-sm-2 sidebar-offcanvas">
+                    <header id="menu" role="banner">
+                        <p class="menu-title">Close</p>
+                        <a href="#nav" class="close-btn">Close</a>
+                    </header>
+
+                    <ul class="sidebar" >
+                        <p class="separator">Navigation</p>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{{site.url}}/search.html">Search</a></li>
+                        <li><a href="{{site.url}}/tags.html">Tags</a></li>
+                        <a class="link hide-on-phone" href="#top">
+                            <div class="goto-top text-center">
+                                <i class="fa fa-step-forward fa-rotate-270"></i>
+                            </div>
+                        </a>
+                    </ul>
+                </nav>
                 <header id="menu" role="banner">
-                    <p class="menu-title">Close</p>
-                    <a href="#nav" class="close-btn">Close</a>
+                    <p class="menu-title">Menu</p>
+                    <a href="#nav" class="menu-btn">navigation</a>
                 </header>
-                <ul class="sidebar">
-                    <p class="separator">Navigation</p>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="{{site.url}}/tags.html">Tags</a></li>
-                    <li><a href="{{site.url}}/search.html">Search</a></li>
-                    <p class="separator"><a href="https://github.com/nadjetey/wangana" class="block-title">About theme</a></p>
-                    <p class="separator">Social</p>
-                    <li><a href="https://github.com/{{site.owner.github}}">Github</a></li>
-                    <li><a href="https://twitter.com/{{site.owner.twitter}}">Twitter</a></li>
-                </ul>
-            </nav>
-            <header id="menu" role="banner">
-                <p class="menu-title">Menu</p>
-                <a href="#nav" class="menu-btn">navigation</a>
-            </header>
-            <!-- Content -->
-            <div class="content col-sm-10">
-                <div class="row strip">
-                    {{ content }}
+                <!-- Content -->
+                <div class="content col-sm-10">
+                    <div class="top-nav">
+                        {{ site.name }}
+                        <span class="pull-right">
+                            <a class="link" href="https://github.com/nadjetey/wangana">About</a>
+                            <a class="link" href="https://twitter.com/{{site.owner.twitter}}">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="link" href="https://github.com/{{site.owner.github}}">
+                                <i class="fa fa-github-square"></i>
+                            </a>
+                            <a class="link" href="{{site.url}}/feed.xml">
+                                <i class="fa fa-rss"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="row">
+                        {{ content }}
+                    </div>
                 </div>
             </div>
         </div>
+        <footer class="footer text-center postlist-meta">
+            Powered by <a class="link" href="https://github.com/nadjetey/wangana">Wangana</a> - Jekyll theme.
+        </footer>
     </div>
-    <footer class="footer text-center blog-meta">
-        Powered by <a href="http://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/nadjetey/wangana">Wangana</a>
-    </footer>
-</div>
-
+</main>
 {% include footer.html %}

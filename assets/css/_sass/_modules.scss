@@ -1,0 +1,204 @@
+// Extra modules
+.statusbar {
+  top: 0;
+  position: fixed;
+  background-color: #eb5e29;
+  height: 2px;
+  z-index: 20;
+}
+
+.goto-top {
+  font-size: 15px !important;
+  cursor: pointer;
+  margin: 1px 0;
+  &:hover,
+  &:focus {
+    background: $primary-color;
+  }
+}
+
+.link {
+  color: $lnk-color;
+  min-width: 139px;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $lnk-highlight-color;
+  }
+}
+
+.top-nav {
+  line-height: 40px;
+  background-color: white;
+  font-weight: 700 !important;
+  padding-left: 15px;
+  span {
+    a {
+      padding-left: 3px;
+    }
+  }
+}
+
+pre {
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+#search {
+  position: absolute;
+  left: 25%;
+  width: 70%;
+  z-index: 100;
+}
+
+#searchbox {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+  background: none;
+  margin: 0;
+  padding: .1em 0 1px;
+}
+
+.icon-remove-sign {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  right: 0;
+  display: block;
+}
+
+.post-li {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+  padding: 7px 0 0;
+  &:hover {
+  background: $primary-color;
+  }
+}
+
+.post-li:hover .postlist-meta,
+.post-li:hover .postlist-meta a {
+  color: #000000 !important;
+}
+
+.leaders {
+  overflow:hidden;
+  i {
+    color:#333;
+  }
+  li:after {
+    content:"";
+    display:block;
+    overflow:hidden;
+    height:1em;
+    border-bottom:2px dotted;
+  }
+  .leaders-left {
+    float:left;
+    margin:0;
+    padding:0 .2em 0 0;
+    cursor:pointer;
+  }
+  .leaders-right {
+    float:right;
+    margin:0;
+    padding:0 0 0 .2em;
+    cursor:pointer;
+  }
+}
+
+.postlist-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.page-title {
+  font-size: 31px;
+  font-weight: 700;
+  padding: 0 0 0 15px;
+}
+
+.post {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 15px 0;
+}
+
+.post > .container,
+#wrap > .container {
+  padding: 75px 0 60px;
+}
+
+.post-comments {
+  border-top: 2px solid #000;
+}
+
+.post-header {
+  width: 100%;
+  text-align: center;
+  line-height: 37px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  padding: 0 0 5px;
+}
+
+
+.post-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.postlist-block {
+  list-style: none;
+  padding: 0;
+}
+
+.postlist-detail {
+  display: none;
+}
+
+.postlist-meta,
+.postlist-meta a {
+  font-size: 16px;
+  color: #afafaf;
+}
+
+.posts {
+  margin: 0;
+}
+
+.results li {
+  padding: 20px 0 0;
+}
+
+
+.signoff {
+  margin-top: 60px;
+  background: $primary-color;
+  padding:20px;
+}
+
+.tags,
+.tag-pages {
+  margin: 25px 0;
+}
+
+.tags-contaier,
+.projects-container {
+  margin: 20px 0 0;
+}
+
+#menu,
+.comments-meta {
+  display: none;
+}

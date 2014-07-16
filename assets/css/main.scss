@@ -1,0 +1,18 @@
+---
+---
+//Last updated 16-07-2014 by nadjetey @12.48am
+/* configurations */
+$primary-color: #f5f5f5;
+$lnk-color: #afafaf;
+$lnk-highlight-color: #333;
+
+/* IMPORT CSS FILES */
+// base css
+@import "site";
+@import "modules";
+// syntax highlighting
+@import "syntax";
+// bootstrap
+@import "bootstrap.min";
+// fontawesome icons
+@import "font-awesome.min";
