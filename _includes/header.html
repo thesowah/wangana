@@ -10,7 +10,7 @@
         <meta name="description" content="nadjetey's blog on wangana - jekyll theme" />
 
         {% if page.tags %}
-        <meta name="keywords" content="{{ page.tags }}">
+        <meta name="keywords" content="{{ page.tags | join: ', ' }}">
         {% else %}
         <meta name="keywords" content="nadjetey, jekyll, wangana">
         {% endif %}
