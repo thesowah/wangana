@@ -34,7 +34,7 @@ title: Tags
                 {% for post in site.tags[this_word] %}{% if post.title != null %}
                 <li class="tag-pages" id="tag-pages{{item}}">
                     <span class="entry-date leaders-left">
-                        <time class="timeago" datetime="{{ post.date | date: "%A %-d %B %Y" }}" itemprop="datePublished">{{ post.date }}</time>
+                        <time class="timeago" datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%A %-d %B %Y" }}</time>
                     </span>
                     <a class="leaders-right" href="{{ post.url }}">{{ post.title }}</a>
                 </li>
