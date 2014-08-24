@@ -7,7 +7,7 @@ layout: default
         <div class="post-li">
             <div class="col-sm-8">
                 <ul class="postlist-block">
-                    <li><time class="timeago postlist-meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
+                    <li><time class="timeago postlist-meta" datetime="{{ post.date }}">{{ post.date |  date: "%A %-d %B %Y" }}</time>
                     <a class="postlist-meta pull-right comments-meta" href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
                     <li><a class="postlist-title" href="{{ post.url }}">{{ post.title }}</a></li>
                 </ul>
