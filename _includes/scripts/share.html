@@ -1,13 +1,10 @@
-<div class="signoff">
-    <p>Posted
+<div class="share">
+    <p>Posted:
         <i>
             {{ page.date |  date: "%A %-d %B %Y" }}
         </i>
-        {% if site.owner.twitter %}
-            by <a href="https://twitter.com/{{ site.owner.twitter }}">@{{site.owner.twitter}}</a>
-        {% endif %}
-        <a class="pull-right" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via={{ site.owner.twitter }}" target="_blank">
-            <i class="fa fa-retweet"></i> Share
+        <a class="pull-right" href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.url }}&text={{ page.title }}&via={{ site.owner.twitter }}" target="_blank">
+            <i class="fa fa-retweet" style="color:red;"></i> Share
         </a>
     </p>
     <ul>
@@ -22,7 +19,7 @@
     </ul>
 </div>
 {% if page.comments %}
-<div class="post-comments">
+<div class="comments">
     <div id="disqus_thread"></div>
 </div>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

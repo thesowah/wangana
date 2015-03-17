@@ -2,22 +2,21 @@
 layout: default
 title: Tags
 ---
-
-<!-- Thanks to [LanyonM](https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html) for this wonderful tutorial -->
+<!-- Thanks to [LanyonM](https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html)
+for the tutorial on leaders w/ js -->
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-<!-- site_tags: {{ site_tags }} -->
+<!-- site_tags -->
 {% capture num_words %}
 {{ site_tags | split:',' | size }}
 {% endcapture %}
-<!-- num_words: {{ num_words }} -->
+<!-- num_words -->
 {% assign tag_words = site_tags | split:',' | sort %}
-<!-- tag_words: {{ tag_words }} -->
-
+<!-- tag_words -->
 <div class="col-sm-12">
     <div class="page-title">
         {{ page.title }}
     </div>
-    <div class="tags-contaier">
+    <div class="page-content">
         <ul class="leaders">
             {% for item in (0..num_words) %}{% unless forloop.last %}
             {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
@@ -30,7 +29,7 @@ title: Tags
                     <i class="fa fa-chevron-down"></i>
                 </a>
             </li>
-            <ul class="tags-contaier tags">
+            <ul class="page-list tags">
                 {% for post in site.tags[this_word] %}{% if post.title != null %}
                 <li class="tag-pages" id="tag-pages{{item}}">
                     <span class="entry-date leaders-left">
@@ -47,4 +46,3 @@ title: Tags
 <script>
     {% include scripts/tags.html %}
 </script>
-

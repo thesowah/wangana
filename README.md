@@ -3,6 +3,9 @@
 
 Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. See this theme live at [nadjetey.github.io](http://nadjetey.github.io)
 
+## Screenshot
+![screenshot](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana.png)
+
 ## Contributing
 1. Fork it ( https://github.com/nadjetey/wangana/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -14,38 +17,26 @@ Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering
 [Open](https://github.com/nadjetey/wangana/issues/new) issues if you run into trouble or have suggestions. Pull Requests always welcome.
 
 ## Installation & Usage
-[Download](https://github.com/nadjetey/wangana/archive/master.zip) package and run the following code:
-``` bat
-$ bundle install
-# Install all dependencies and setup coding environment
+1 > [Download](https://github.com/nadjetey/wangana/archive/master.zip) package
 
-$ jekyll serve --watch
-# Serve site locally. Now browse to http://localhost:4000
-```
-_Note:  Requires Ruby version 1.9 or above_
-
-## Configuration
+2 > Fill in the details of the configuration file (/_config.yml) by uncommenting the differents and edit to taste
 Edit: _config.yml (general options), main.css (theme colors & fonts)
 ``` bat
 wangana/
 ├── _config.yml
 ├── _assets/
-    ├── css/
+    ├── _scss/
         ├── main.scss
 ```
 
-## Publish to Github Pages
-1. Add your domain to _CNAME_
-2. Edit your repo address at _Rakefile_
-
-Run rake task. **NOTE: It will deploy the generated site to _gh-pages_ branch overwriting it**
+3 > Run locally with the following commands while in the root directory and view in a browser at localhost:4000
 ``` bat
-$ rake site:publish
-```
-_Thanks to [ksaa](https://github.com/ksaa) for rake tasks_
+$ jekyll build
+# Compile and build site files
 
-## Screenshot
-![screenshot](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana_screenshot_index.png)
+$ jekyll serve --watch
+# Serve site locally
+```
 
 ## Author
 Made with love from [@_nadjetey](https://twitter.com/_nadjetey).

@@ -2,38 +2,43 @@
 layout: default
 ---
 <div class="col-sm-12">
-    <div class="posts">
+    <div class="page">
         {% for post in site.posts %}
-        <div class="post-li">
-            <div class="col-sm-8">
-                <ul class="postlist-block">
-                    <li><time class="timeago postlist-meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
-                    <a class="postlist-meta pull-right comments-meta" href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                    <li><a class="postlist-title" href="{{ post.url }}">{{ post.title }}</a></li>
-                </ul>
+            {% if post.archive == false %}
+            <div class="page-item">
+                <div class="col-sm-8">
+                    <ul class="page-item-title">
+                        <li><time class="timeago meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
+                        <a class="meta pull-right comments-meta" href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
+                        <li><a class="title" href="{{ post.url }}">{{ post.title }}</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 hide-on-phone">
+                    <ul class="page-item-title pull-right meta">
+                        <li><a href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
+                        <li><a href="{{ post.url }}">more <i class="fa fa-ellipsis-h"></i></a></li>
+                        <li><a class="pib-indicator">gist <i class="fa fa-expand"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 page-item-body">
+                    {{post.excerpt}}
+                </div>
             </div>
-
-            <div class="col-sm-4 hide-on-phone">
-                <ul class="postlist-block pull-right postlist-meta">
-                    <li><a href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                    <li><i><a href="{{ post.url }}">Details...</a></i></li>
-                    <li><strong><a class="postlist-detail-indicator">Expand +</a></strong></li>
-                </ul>
-            </div>
-
-            <div class="col-sm-12 postlist-detail">
-                {{post.excerpt}}
-            </div>
-        </div>
+            {% endif %}
         {% endfor %}
     </div>
 </div>
-
 <script>
-    $(".post-li .postlist-detail-indicator").click(function() {
-        var preview = $(this);
-        preview.text(preview.text()=='Expand +'?'Collapse -':'Expand +');
+$(document).ready(function() {
+    $(".page").children().first().find(".page-item-body").css( "display", "block" );
+    $(".page").children().first().find(".pib-indicator")
+        .find("i").toggleClass("fa-compress").toggleClass("fa-expand");
 
-        $(this).closest(".post-li").find(".postlist-detail").toggle("slow", function() {});
+    $(".page-item .pib-indicator").click(function() {
+        var preview = $(this);
+        preview.find("i").toggleClass("fa-expand").toggleClass("fa-compress");
+        $(this).closest(".page-item").find(".page-item-body").toggle("slow", function() {});
     });
+});
 </script>
