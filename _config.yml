@@ -1,14 +1,18 @@
 name: Wangana
-description:  Perfect for powering your GitHub hosted blog.
+description:  Perfect for powering your Github Pages hosted blog
 
 sass:
   sass_dir: assets/css/_sass
   style: :compressed
 
-# url: http://nadjetey.github.io
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
+# url: #
+permalink: /:year/:month/:title/
 owner:
-    name: Nii Adjetey Sowah
+    name: #
     twitter: #
     github: #
     disqus_shortname: #
@@ -16,9 +20,4 @@ owner:
 ga_id: #
 ga_username: #
 
-permalink: /:year/:month/:title/
 timezone: Africa/Accra
-
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]

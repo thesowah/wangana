@@ -2,22 +2,22 @@
 layout: default
 ---
 <div class="col-sm-12">
-    <div class="posts">
+    <div class="page">
     	<div class="page-title">
     		{{ page.title }}
-    		<div class="postlist-meta">
-    			Posted
+    		<div class="meta">    			
                 {% if site.owner.name %}
-                by {{site.owner.name}},
+                By {{site.owner.name}},
                 {% endif %}
     			<time class="timeago" datetime="{{ page.date }}">{{ page.date |  date: "%A %-d %B %Y" }}</time>,
     			<a href="{{ page.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a>
     			comments.
     		</div>
     	</div>
-        <div class="post">
+        <div class="page-content">
             {{ content }}
-            {% include scripts/signoff_block.html %}
+            <!-- Share & Comments -->
+            {% include scripts/share.html %}            
         </div>
     </div>
 </div>
@@ -25,4 +25,5 @@ layout: default
     $(".page-preview-icon").hover(function(){
         $(this).parents(".page-nav").css("z-index","5000");
     });
+    {% include scripts/disqus.html %}
 </script>

@@ -1,0 +1,36 @@
+$(document).ready(function() {
+    var timer;
+
+    $(window).bind('scroll', (function() {
+        clearTimeout(timer);
+        timer = setTimeout(getPercent, 5);
+        isTop();
+    }));
+
+    $(".goto-top-link").click(function(){
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+});
+
+function scrollPossition() {
+    return ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
+}
+
+function getPercent() {
+    $(".statusbar").css("width", String(scrollPossition()) + "%");
+
+    if (scrollPossition() > 97) {
+        $(".statusbar").css("background-color", "#1ca265");
+    } else {
+        $(".statusbar").css("background-color", "#eb5e29");
+    }
+    return;
+}
+
+function isTop() {
+  if(scrollPossition() > 30)
+    $(".goto-top").fadeIn("slow");
+  else
+    $(".goto-top").fadeOut("slow");
+}

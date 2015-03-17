@@ -5,25 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ site.name }} {% if page.title %} &mdash; {{ page.title }} {% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="alternate" type="application/atom+xml" title="{{site.name}}" href="{{site.url }}/feed.xml">
-
-        <meta name="description" content="nadjetey's blog on wangana - jekyll theme" />
-
+        <link rel="alternate" type="application/atom+xml" title="{{site.name}}" href="{{site.url}}/feed.xml">
+        <!-- Loop and attach page tags from page meta section -->
         {% if page.tags %}
-        <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+        <meta name="keywords" content="{{ page.tags }}">
         {% else %}
-        <meta name="keywords" content="nadjetey, jekyll, wangana">
+        <meta name="keywords" content="">
         {% endif %}
-
-        <link rel="icon" type="image/png" href="{{site.url}}/favicon.png">
-
+        <link rel="icon" type="image/png" href="{{ "/favicon.png" | prepend: site.url }}">
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{site.url}}/assets/css/main.css">
+        <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
         <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
-
         <!-- JQuery -->
-        <script src="{{site.url}}/assets/js/jquery-1.10.2.js"></script>
-
+        <script src="{{ "/assets/js/jquery-1.10.2.js" | prepend: site.url }}"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
