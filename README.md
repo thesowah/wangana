@@ -1,13 +1,13 @@
 ![favicon](https://raw.github.com/nadjetey/wangana/master/favicon.png) Wangana - Jekyll Theme
 ==============
 
-Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. See this theme live at [nadjetey.github.io](http://nadjetey.github.io)
+Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. Created with love by [nadjetey](https://twitter.com/_nadjetey). Live demo [here](http://nadjetey.github.io)
 
 ## Screenshot
 ![screenshot](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana.png)
 
 ## Contributing
-1. Fork it ( https://github.com/nadjetey/wangana/fork )
+1. Fork the theme ( https://github.com/nadjetey/wangana/fork ) The `master` branch is for development and pull requests. The `gh-pages` branch is for the demo page; don't bother.
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -37,9 +37,6 @@ $ jekyll build
 $ jekyll serve --watch
 # Serve site locally
 ```
-
-## Author
-Made with love from [@_nadjetey](https://twitter.com/_nadjetey).
 
 ## Copyright & License
 The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document.](LICENSE)
