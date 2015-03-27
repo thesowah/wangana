@@ -9,13 +9,17 @@
                 <nav id="nav" role="navigation" class="col-sm-2 sidebar-offcanvas">
                     <header id="menu" role="banner">
                         <p class="menu-title">Close</p>
-                        <a href="#nav" class="close-btn">Close</a>
+                        <a href="#nav" class="close-btn">
+                            <img src="{{ "/assets/fonts/close-btn.svg" | prepend: site.url }}" alt="close button">
+                        </a>
                     </header>
                     {% include sidenav.html %}                    
                 </nav>
                 <header id="menu" role="banner">
                     <p class="menu-title">Menu</p>
-                    <a href="#nav" class="menu-btn">navigation</a>
+                    <a href="#nav" class="menu-btn">
+                        <img src="{{ "/assets/fonts/menu-btn.svg" | prepend: site.url }}" alt="menu button">
+                    </a>
                 </header>
                 <!-- Content -->
                 <div class="col-sm-10">
@@ -28,7 +32,7 @@
                             <a id="git-ic" class="link" href="https://github.com/{{site.owner.github}}">
                                 <i class="fa fa-github-square fa-lg"></i>
                             </a>
-                            <a id="rss-ic" class="link" href="{{site.url}}/feed.xml">
+                            <a id="rss-ic" class="link" href="{{ "/feed.xml" | prepend: site.url }}">
                                 <i class="fa fa-rss fa-lg"></i>
                             </a>
                         </span>

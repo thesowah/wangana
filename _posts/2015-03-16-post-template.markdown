@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Post template"
-date:   2014-03-03
+date: 2014-03-03
 comments: true
 tags: sample_post
 archive: false

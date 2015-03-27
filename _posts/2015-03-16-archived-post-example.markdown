@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Archived post example"
-date:   2014-03-03
+date: 2014-03-03
 comments: true
 tags: sample_post archived_post_example
 archive: true
