@@ -1,5 +1,5 @@
 name: Wangana
-description:  Perfect for powering your Github Pages hosted blog
+description:  Jekyll theme
 
 sass:
   sass_dir: assets/css/_sass
