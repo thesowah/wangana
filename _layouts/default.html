@@ -24,7 +24,7 @@
                 <!-- Content -->
                 <div class="col-sm-10">
                     <nav class="top">
-                        <a href="/">{{ site.description }} &mdash; {{ site.name }}</a>
+                        <a href="{{ "/" | prepend: site.url }}">{{ site.description }} &mdash; {{ site.name }}</a>
                         <span class="pull-right">
                             <a id="twitter-ic" class="link" href="https://twitter.com/{{site.owner.twitter}}">
                                 <i class="fa fa-twitter fa-lg"></i>
