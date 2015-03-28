@@ -9,14 +9,14 @@ layout: default
                 <div class="col-sm-8">
                     <ul class="page-item-title">
                         <li><time class="timeago meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
-                        <a class="meta pull-right comments-meta" href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                        <li><a class="title" href="{{ post.url }}">{{ post.title }}</a></li>
+                        <a class="meta pull-right comments-meta" href="{{ post.url | prepend: site.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
+                        <li><a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 hide-on-phone">
                     <ul class="page-item-title pull-right meta">
-                        <li><a href="{{ post.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                        <li><a href="{{ post.url }}">more <i class="fa fa-ellipsis-h"></i></a></li>
+                        <li><a href="{{ post.url | prepend: site.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
+                        <li><a href="{{ post.url | prepend: site.url }}">more <i class="fa fa-ellipsis-h"></i></a></li>
                         <li><a class="pib-indicator">gist <i class="fa fa-expand"></i></a>
                         </li>
                     </ul>
