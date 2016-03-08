@@ -3,8 +3,7 @@
 
 Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. Created with love by [nadjetey](https://twitter.com/_nadjetey). 
 
-* Live demo [here](http://nadjetey.github.io/wangana/)
-* See wangana [elsewhere](http://nadjetey.github.io)
+* Demo [here](http://nadjetey.github.io/wangana/)
 
 ## Screenshot
 ![screenshot](https://raw.github.com/nadjetey/wangana/master/assets/images/wangana.png)
