@@ -1,15 +1,15 @@
 ![favicon](https://raw.github.com/iamnii/wangana/master/favicon.png) Wangana - Jekyll Theme
 ==============
 
-Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. Created with love by [iamnii](https://twitter.com/_iamnii).
+Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. Created with love by [iamnii](https://twitter.com/thesowah).
 
-* Demo [here](http://iamnii.github.io/wangana/)
+* Demo [here](http://thesowah.github.io/wangana/)
 
 ## Screenshot
-![screenshot](https://raw.github.com/iamnii/wangana/master/assets/images/wangana.png)
+![screenshot](https://raw.github.com/thesowah/wangana/master/assets/images/wangana.png)
 
 ## Contributing
-1. Fork the theme ( https://github.com/iamnii/wangana/fork ) The `master` branch is for development and pull requests. The `gh-pages` branch is for the demo page; don't bother.
+1. Fork the theme ( https://github.com/thesowah/wangana/fork ) The `master` branch is for development and pull requests. The `gh-pages` branch is for the demo page; don't bother.
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -19,7 +19,7 @@ Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering
 [Open](https://github.com/iamnii/wangana/issues/new) issues if you run into trouble or have suggestions. Pull Requests always welcome.
 
 ## Installation & Usage
-1 > [Download](https://github.com/iamnii/wangana/archive/master.zip) package
+1 > [Download](https://github.com/thesowah/wangana/archive/master.zip) package
 
 2 > Fill in the details of the configuration file (/_config.yml) by uncommenting the differents and edit to taste
 Edit: _config.yml (general options), main.css (theme colors & fonts)
