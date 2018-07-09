@@ -9,7 +9,7 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
-url: https://thesowah.github.io/wangana
+url: https://dshizuka.github.io/network2018
 permalink: /:year/:month/:title/
 owner:
     name: #
